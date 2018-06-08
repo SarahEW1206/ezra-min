@@ -48,8 +48,12 @@ nav {
   padding-bottom: 7px;
 }
 
-nav div {
-  border-radius: 5px;
+
+.nav-bg-mobile {
+  grid-column: 3 / -3;
+  grid-row: 2 / span 2;
+  background-color: rgba(125, 182, 86, .67);
+  background-image: url(https://raw.githubusercontent.com/SarahEW1206/ezra-min/master/img/mobile-nav-bg.png)
 }
 
 
@@ -69,7 +73,7 @@ nav .home {
   justify-content: center;
   align-items: center;
   padding: 8px;
-  background-color: rgba(125, 182, 86, .67);
+  
 }
 
 nav .mission {
@@ -79,7 +83,7 @@ nav .mission {
   justify-content: center;
   align-items: center;
   padding: 8px;
-  background-color: rgba(125, 182, 86, .67);
+  
 }
 
 nav .donate {
@@ -89,7 +93,6 @@ nav .donate {
   justify-content: center;
   align-items: center;
   padding: 8px;
-  background-color: rgba(125, 182, 86, .67);
 }
 
 nav .shelter {
@@ -99,7 +102,6 @@ nav .shelter {
   justify-content: center;
   align-items: center;
   padding: 8px;
-  background-color: rgba(125, 182, 86, .67);
 }
 
 nav .store {
@@ -109,7 +111,6 @@ nav .store {
   justify-content: center;
   align-items: center;
   padding: 8px;
-  background-color: rgba(125, 182, 86, .67);
 }
 
 nav .contact {
@@ -119,7 +120,6 @@ nav .contact {
   justify-content: center;
   align-items: center;
   padding: 8px;
-  background-color: rgba(125, 182, 86, .67);
 }
 
 @media screen and (min-width: 600px) {
@@ -132,9 +132,15 @@ nav .contact {
     margin: 0 auto;
     top: -10px;
     font-size: 13px;
-    background-color: rgba(255, 255, 255, 0.0);
     padding-bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.0);
   }
+
+  .nav-bg-mobile {
+  grid-column: 3 / -3;
+  grid-row: 2 / span 2;
+  background-color: rgba(125, 182, 86, 0.0);
+}
 
   nav .home {
     grid-column: 1 / span 1;
@@ -143,7 +149,6 @@ nav .contact {
     justify-content: center;
     align-items: center;
     padding: 0px;
-    background-color: rgba(125, 182, 86, 0);
   }
 
   nav .mission {
@@ -153,7 +158,6 @@ nav .contact {
     justify-content: center;
     align-items: center;
     padding: 0px;
-    background-color: rgba(125, 182, 86, 0);
   }
 
   nav .donate {
@@ -163,7 +167,6 @@ nav .contact {
     justify-content: center;
     align-items: center;
     padding: 0px;
-    background-color: rgba(125, 182, 86, 0);
   }
 
   nav .logo-center {
@@ -173,7 +176,6 @@ nav .contact {
     justify-content: center;
     align-items: center;
     padding: 0px;
-    background-color: rgba(125, 182, 86, 0);
   }
 
   nav .shelter {
@@ -183,7 +185,6 @@ nav .contact {
     justify-content: center;
     align-items: center;
     padding: 0px;
-    background-color: rgba(125, 182, 86, 0);
   }
 
   nav .store {
@@ -193,7 +194,6 @@ nav .contact {
     justify-content: center;
     align-items: center;
     padding: 0px;
-    background-color: rgba(125, 182, 86, 0);
   }
 
   nav .contact {
@@ -203,18 +203,18 @@ nav .contact {
     justify-content: center;
     align-items: center;
     padding: 0px;
-    background-color: rgba(125, 182, 86, 0);
   }
 
 }
 
 .logo {
   width: 60%;
+  max-width: 250px;
 }
 
 @media screen and (min-width: 600px) {
   .logo {
-    width: 80%;
+    width: 70%;
   }
 }
 
