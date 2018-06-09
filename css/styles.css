@@ -30,6 +30,7 @@ header {
   width: 97%;
   max-width: 1090px;
   margin-top: 0px;
+  background-color: rgba(255, 255, 255, 0.0);
   transition: all 1s ease;
 }
 
@@ -265,8 +266,94 @@ nav .contact {
 
 /*Store section of homepage*/
 .home-store {
-  height: 400px;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 20px auto auto auto auto auto auto auto auto auto auto auto ;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
+}
+
+.circle-image {
+  grid-column: 2 / span 6;
+  grid-row: 2 / span 9;
+  border-radius: 100%;
+  width: 100%;
+}
+
+.store-logo {
+  grid-column: 3 / span 3;
+  grid-row: 5 / span 1;
+    width: 100%;
+    max-width: 180px;
+}
+
+.store-tag {
+  grid-column: 7 / span 3;
+  grid-row: 8 / span 2;
+  width: 100%;
+}
+
+.store-text {
+  grid-column: 2 / -2;
+  grid-row: 11 / span 1;
+  width: 100%;
+  font-weight: 100;
+  color:#333;
+}
+
+.store-button {
+  grid-column: 3 / span 6;
+  grid-row: 12 / span 1;
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: rgba(95, 165, 202, 1.0);
+  border-radius: 4px;
+  font-family: 'IM Fell English', serif;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .home-store {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 80px auto auto auto auto auto auto auto auto auto auto 80px ;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.circle-image {
+  grid-column: 2 / span 5;
+  grid-row: 2 / span 9;
+}
+
+.store-logo {
+  grid-column: 3 / span 2;
+  grid-row: 5 / span 1;
+  width: 100%;
+}
+
+.store-tag {
+  grid-column: 6 / span 3;
+  grid-row: 4 / span 2;
+  margin-left: 10%;
+}
+
+.store-text {
+  grid-column: 7 / -2;
+  grid-row: 6 / span 3;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+.store-button {
+  grid-column: 7 / span 2;
+  grid-row: 9 / span 1;
+  margin-left: 15px;
+
+}
 }
