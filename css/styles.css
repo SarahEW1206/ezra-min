@@ -285,8 +285,8 @@ nav .contact {
 .store-logo {
   grid-column: 3 / span 3;
   grid-row: 5 / span 1;
-    width: 100%;
-    max-width: 180px;
+  width: 100%;
+  max-width: 180px;
 }
 
 .store-tag {
@@ -317,43 +317,139 @@ nav .contact {
 
 @media screen and (min-width: 768px) {
   .home-store {
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 80px auto auto auto auto auto auto auto auto auto auto 80px ;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .circle-image {
+    grid-column: 2 / span 5;
+    grid-row: 2 / span 9;
+  }
+
+  .store-logo {
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 1;
+    width: 100%;
+  }
+
+  .store-tag {
+    grid-column: 6 / span 3;
+    grid-row: 4 / span 2;
+    margin-left: 10%;
+  }
+
+  .store-text {
+    grid-column: 7 / -2;
+    grid-row: 6 / span 3;
+    padding-left: 15px;
+    font-size: 20px;
+  }
+
+  .store-button {
+    grid-column: 7 / span 2;
+    grid-row: 9 / span 1;
+    margin-left: 15px;
+
+  }
+}
+
+/*first quote section*/
+
+.quote-section-1 {
   display: grid;
   grid-gap: 2px;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 80px auto auto auto auto auto auto auto auto auto auto 80px ;
-  background-color: #ffffff;
+  grid-template-rows: 20px 80px auto auto auto 50px  ;
+  background-color: rgba(95, 165, 202, 1.0);
   margin: 0;
   padding: 0;
 }
 
-.circle-image {
-  grid-column: 2 / span 5;
-  grid-row: 2 / span 9;
+.big-quote {
+  grid-column: 1 / -1;
+  grid-row: 2 / span 1;
+  font-family: 'IM Fell English', serif;
+  color: #333;
+  font-size: 100px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
-.store-logo {
-  grid-column: 3 / span 2;
+.bold-white-text {
+  grid-column: 4 / -2;
+  grid-row: 3 / span 1;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: right;
+  margin: 0;
+}
+
+.handwriting-text {
+  grid-column: 2 / -2;
+  grid-row: 4 / span 1;
+  font-family: 'La Belle Aurore', Times, serif;
+  color: #333;
+  font-size: 28px;
+  line-height: 28px;
+  text-align: right;
+  margin: 0;
+}
+
+.quote-source {
+  grid-column: 2 / -2;
   grid-row: 5 / span 1;
-  width: 100%;
-}
-
-.store-tag {
-  grid-column: 6 / span 3;
-  grid-row: 4 / span 2;
-  margin-left: 10%;
-}
-
-.store-text {
-  grid-column: 7 / -2;
-  grid-row: 6 / span 3;
-  padding-left: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  color: #ffffff;
   font-size: 20px;
+  text-align: right;
+  margin: 0;
 }
 
-.store-button {
-  grid-column: 7 / span 2;
-  grid-row: 9 / span 1;
-  margin-left: 15px;
-
+@media screen and (min-width: 500px) {
+.bold-white-text {
+    grid-column: 1 / -2;
+  }
 }
+
+
+@media screen and (min-width: 768px) {
+  .quote-section-1 {
+    grid-template-rows: 30vh 80px auto auto auto 30vh  ;
+    background-color: rgba(95, 165, 202, 1.0);
+    margin: 0;
+    padding: 0;
+  }
+
+  .bold-white-text {
+    grid-column: 2 / -3;
+    grid-row: 3 / span 1;
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .handwriting-text {
+    grid-column: 4 / -3;
+    grid-row: 4 / span 1;
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .quote-source {
+    grid-column: 3 / span 6;
+    grid-row: 5 / span 1;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: right;
+    margin: 0;
+  }
 }
