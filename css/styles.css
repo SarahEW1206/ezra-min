@@ -14,8 +14,9 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: lightgray;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+background-color: #f0f0f0;
+background-image: url('');
+font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   transition: all 1s ease;
 
 }
@@ -59,7 +60,7 @@ nav {
   background-image: none;
   padding: 10px 0;
   width: 97.5%;
-  max-width: 1080px;
+  max-width: 1200px;
   margin-top: 0;
   transition: all 1s ease;
 
@@ -246,12 +247,12 @@ nav .contact {
 }
 
 .container {
-  width: 97%;
-  max-width: 1080px;
+  width: 100%;
+  max-width: 1200px;
   display: block;
   margin: 0 auto;
-  box-shadow: 0 0 4px black;
-  background-color: #ffffff;
+/*  box-shadow: 0 0 4px black;
+*/  background-color: #ffffff;
 }
 
 .hero-img {
@@ -275,9 +276,9 @@ nav .contact {
   padding: 0;
 }
 
-.circle-image {
-  grid-column: 2 / span 6;
-  grid-row: 2 / span 9;
+.store-image {
+  grid-column: 4 / span 4;
+  grid-row: 4 / span 6;
   border-radius: 100%;
   width: 100%;
 }
@@ -290,9 +291,12 @@ nav .contact {
 }
 
 .store-tag {
-  grid-column: 7 / span 3;
-  grid-row: 8 / span 2;
+  grid-column: 3 / span 6;
+  grid-row: 2 / span 1;
   width: 100%;
+  text-align: center;
+  color: #7db656 ;
+  font-family: 'IM Fell English', serif;
 }
 
 .store-text {
@@ -300,6 +304,7 @@ nav .contact {
   grid-row: 11 / span 1;
   width: 100%;
   font-weight: 100;
+  text-align: center;
   color:#333;
 }
 
@@ -308,7 +313,7 @@ nav .contact {
   grid-row: 12 / span 1;
   width: 100%;
   padding: 10px 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   background-color: rgba(95, 165, 202, 1.0);
   border-radius: 4px;
   font-family: 'IM Fell English', serif;
@@ -326,9 +331,9 @@ nav .contact {
     padding: 0;
   }
 
-  .circle-image {
-    grid-column: 2 / span 5;
-    grid-row: 2 / span 9;
+  .store-image {
+   grid-column: 2 / span 4;
+    grid-row: 3 / span 8;
   }
 
   .store-logo {
@@ -338,9 +343,10 @@ nav .contact {
   }
 
   .store-tag {
-    grid-column: 6 / span 3;
+    grid-column: 7 / span 3;
     grid-row: 4 / span 2;
-    margin-left: 10%;
+    padding-left: 15px;
+    text-align: left;
   }
 
   .store-text {
@@ -348,6 +354,7 @@ nav .contact {
     grid-row: 6 / span 3;
     padding-left: 15px;
     font-size: 20px;
+    text-align: left
   }
 
   .store-button {
@@ -453,3 +460,145 @@ nav .contact {
     margin: 0;
   }
 }
+
+/*Shelter section of homepage*/
+.home-shelter {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 40px auto 10px auto auto auto auto auto auto auto auto auto ;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.shelter-image {
+  grid-column: 4 / span 4;
+  grid-row: 4 / span 6;
+  border-radius: 100%;
+  width: 100%;
+}
+
+
+.shelter-tag {
+  grid-column: 3 / span 6;
+  grid-row: 2 / span 1;
+  width: 100%;
+  text-align: center;
+  color: #7db656 ;
+  font-family: 'IM Fell English', serif;
+}
+
+.shelter-text {
+  grid-column: 2 / -2;
+  grid-row: 11 / span 1;
+  width: 100%;
+  font-weight: 100;
+  text-align: center;
+  color:#333;
+}
+
+.shelter-button {
+  grid-column: 3 / span 6;
+  grid-row: 12 / span 1;
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 50px;
+  background-color: #ed6c79;
+  border-radius: 4px;
+  font-family: 'IM Fell English', serif;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .home-shelter {
+    grid-template-rows: 80px auto auto auto auto auto auto auto auto auto auto 80px ;
+  }
+
+  .shelter-image {
+    grid-column: 2 / span 4;
+    grid-row: 3 / span 8;
+  }
+
+  .shelter-tag {
+    grid-column: 7 / span 3;
+    grid-row: 4 / span 2;
+    padding-left: 15px;
+    text-align: left;
+  }
+
+  .shelter-text {
+    grid-column: 7 / -2;
+    grid-row: 6 / span 3;
+    padding-left: 15px;
+    font-size: 20px;
+    text-align: left
+  }
+
+  .shelter-button {
+    grid-column: 7 / span 2;
+    grid-row: 9 / span 1;
+    margin-left: 15px;
+
+  }
+}
+
+/*Statistics section of homepage*/
+.home-statistics {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 40px auto auto 20px auto 20px auto auto auto auto auto auto ;
+  background-color: #ed6c79;
+  margin: 0;
+  padding: 0;
+}
+
+.statistics-heading {
+  grid-column : 2 / span 9;
+  grid-row: 2 / span 1;
+}
+
+.food-stamps {
+  grid-column : 2 / span 4;
+  grid-row: 3 / span 1;
+  width: 100%;
+
+}
+
+.single-home {
+  grid-column : 2 / span 4;
+  grid-row: 5 / span 1;
+  width: 100%;
+
+}
+
+.health-ins{
+  grid-column : 2 / span 4;
+  grid-row: 7 / span 1;
+  width: 100%;
+
+}
+
+.food-stamp-text {
+  grid-column : 7 / span 3;
+  grid-row: 3 / span 1;
+  width: 100%;
+
+}
+
+.single-home-text {
+  grid-column : 7 / span 3;
+  grid-row: 5 / span 1;
+  width: 100%;
+
+}
+
+.health-ins-text {
+  grid-column : 7 / span 3;
+  grid-row: 7 / span 1;
+  width: 100%;
+
+}
+
+
