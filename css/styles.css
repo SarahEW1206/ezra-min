@@ -15,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
 background-color: #f0f0f0;
-background-image: url('');
+    background-image: url(https://raw.githubusercontent.com/SarahEW1206/ezra-min/master/img/light_noise_diagonal_@2X.png);
 font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   transition: all 1s ease;
 
@@ -263,6 +263,39 @@ nav .contact {
   width: 100%;
   position: relative;
   z-index: 0;
+}
+
+/*mission homepage*/
+
+.home-mission {
+  padding: 30px;
+  background-color: #7db656;
+  margin: 30px 0;
+}
+
+.home-mission h1 {
+    font-family: 'IM Fell English', serif;
+    color: #fff;
+     max-width: 800px;
+    display: block;
+    margin: 20px auto 30px auto;
+}
+
+.home-mission p {
+    font-size: 18px;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+}
+
+.mission-button {
+  padding: 10px 20px;
+  display: block;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 4px;
+  font-family: 'IM Fell English', serif;
+  font-size: 14px;
 }
 
 /*Store section of homepage*/
