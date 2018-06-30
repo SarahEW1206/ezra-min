@@ -92,6 +92,18 @@ nav {
   margin-top: -250px;
 }
 
+@media(min-width: 800px) {
+
+  #mission-link {
+  margin-top: -140px;
+}
+
+  #store-link {
+  margin-top: -120px;
+}
+
+}
+
 .white {
   background-color: rgba(255, 255, 255, 1.0);
   background-image: none;
