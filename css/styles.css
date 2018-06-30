@@ -18,7 +18,36 @@ background-color: #f0f0f0;
     background-image: url(https://raw.githubusercontent.com/SarahEW1206/ezra-min/master/img/light_noise_diagonal_@2X.png);
 font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   transition: all 1s ease;
+}
 
+a {
+  text-decoration: none;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.scroll-down {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  position: absolute;
+  bottom: 10px;
+  z-index: 100000;
+}
+
+.scroll-down p {
+  font-size: 16px;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.fas.fa-long-arrow-alt-down {
+  padding: 0;
+  margin: 0;
 }
 
 header {
@@ -29,16 +58,18 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   width: 97%;
-  max-width: 1090px;
-  margin-top: 0px;
+  /*max-width: 1090px;
+  margin-top: 0px;*/
+  margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.0);
   transition: all 1s ease;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   header {
     margin-top: 30px;
     background-image: url(https://raw.githubusercontent.com/SarahEW1206/ezra-min/master/img/nav-bg.png);
+    background-position: 50% 50%;
   }
 }
 
@@ -48,6 +79,7 @@ nav {
   grid-template-rows: auto auto auto;
   grid-gap: 5px;
   width: 100%;
+  max-width: 1090px;
   font-size: 11px;
   font-weight: 700;
   color: #333;
@@ -55,13 +87,18 @@ nav {
   padding-bottom: 7px;
 }
 
+#mission-link, #store-link {
+  position: absolute;
+  margin-top: -250px;
+}
+
 .white {
   background-color: rgba(255, 255, 255, 1.0);
   background-image: none;
   padding: 10px 0;
-  width: 97.5%;
-  max-width: 1200px;
-  margin-top: 0;
+  width: 100%;
+/*  max-width: 1080px;
+*/  margin-top: 0;
   transition: all 1s ease;
 
 }
@@ -91,7 +128,6 @@ nav .home {
   justify-content: center;
   align-items: center;
   padding: 10px 0 4px 0;
-  
 }
 
 nav .mission {
@@ -101,7 +137,6 @@ nav .mission {
   justify-content: center;
   align-items: center;
   padding: 10px 0 4px 0;
-  
 }
 
 nav .donate {
@@ -140,7 +175,7 @@ nav .contact {
   padding: 4px 0 10px 0;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
 
   nav {
     display: grid;
@@ -175,7 +210,7 @@ nav .contact {
     padding: 0px;
   }
 
-  nav .donate {
+  nav .store {
     grid-column: 3 / span 1;
     grid-row: 1 / span 1;
     display: flex;
@@ -202,7 +237,7 @@ nav .contact {
     padding: 0px;
   }
 
-  nav .store {
+  nav .donate {
     grid-column: 8 / span 1;
     grid-row: 1 / span 1;
     display: flex;
@@ -234,7 +269,7 @@ nav .contact {
   transition: all 1s ease;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .logo {
     width: 70%;
   }
@@ -248,8 +283,8 @@ nav .contact {
 
 .container {
   width: 100%;
-  max-width: 1200px;
-  display: block;
+/*  max-width: 1080px;
+*/  display: block;
   margin: 0 auto;
 /*  box-shadow: 0 0 4px black;
 */  background-color: #ffffff;
@@ -257,6 +292,8 @@ nav .contact {
 
 .hero-img {
   margin: 0;
+  position: relative;
+  z-index: 555;
 }
 
 .header-img {
@@ -265,24 +302,29 @@ nav .contact {
   z-index: 0;
 }
 
+
+
 /*mission homepage*/
 
 .home-mission {
   padding: 30px;
   background-color: #7db656;
-  margin: 30px 0;
+  margin-top: -10px;
 }
 
 .home-mission h1 {
     font-family: 'IM Fell English', serif;
     color: #fff;
+    font-size: 32px;
+    letter-spacing: 2px;
      max-width: 800px;
     display: block;
     margin: 20px auto 30px auto;
 }
 
 .home-mission p {
-    font-size: 18px;
+    font-size: 22px;
+    line-height: 28px;
     max-width: 800px;
     display: block;
     margin: 0 auto;
@@ -295,7 +337,7 @@ nav .contact {
   background-color: #fff;
   border-radius: 4px;
   font-family: 'IM Fell English', serif;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 /*Store section of homepage*/
@@ -329,6 +371,8 @@ nav .contact {
   width: 100%;
   text-align: center;
   color: #7db656 ;
+  font-size: 32px;
+  letter-spacing: 2px;
   font-family: 'IM Fell English', serif;
 }
 
@@ -339,6 +383,7 @@ nav .contact {
   font-weight: 100;
   text-align: center;
   color:#333;
+  font-size: 18px;
 }
 
 .store-button {
@@ -350,7 +395,7 @@ nav .contact {
   background-color: rgba(95, 165, 202, 1.0);
   border-radius: 4px;
   font-family: 'IM Fell English', serif;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -394,6 +439,7 @@ nav .contact {
     grid-column: 7 / span 2;
     grid-row: 9 / span 1;
     margin-left: 15px;
+    font-size: 20px;
 
   }
 }
@@ -519,6 +565,8 @@ nav .contact {
   width: 100%;
   text-align: center;
   color: #7db656 ;
+    font-size: 32px;
+  letter-spacing: 2px;
   font-family: 'IM Fell English', serif;
 }
 
@@ -529,6 +577,7 @@ nav .contact {
   font-weight: 100;
   text-align: center;
   color:#333;
+  font-size: 18px;
 }
 
 .shelter-button {
@@ -540,7 +589,7 @@ nav .contact {
   background-color: #ed6c79;
   border-radius: 4px;
   font-family: 'IM Fell English', serif;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -572,6 +621,7 @@ nav .contact {
     grid-column: 7 / span 2;
     grid-row: 9 / span 1;
     margin-left: 15px;
+    font-size: 20px;
 
   }
 }
@@ -581,15 +631,20 @@ nav .contact {
   display: grid;
   grid-gap: 2px;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 40px auto auto 20px auto 20px auto auto auto auto auto auto ;
+  grid-template-rows: 40px auto auto 20px auto 20px auto auto auto auto auto 50px ;
   background-color: #ed6c79;
   margin: 0;
   padding: 0;
 }
 
 .statistics-heading {
-  grid-column : 2 / span 9;
+  grid-column : 1 / span 10;
   grid-row: 2 / span 1;
+  text-align: center;
+  margin: 50px 0 50px 0;
+  padding: 0;
+  font-size: 50px;
+  color: #fff;
 }
 
 .food-stamps {
@@ -617,6 +672,9 @@ nav .contact {
   grid-column : 7 / span 3;
   grid-row: 3 / span 1;
   width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
 
 }
 
@@ -624,6 +682,9 @@ nav .contact {
   grid-column : 7 / span 3;
   grid-row: 5 / span 1;
   width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
 
 }
 
@@ -631,7 +692,270 @@ nav .contact {
   grid-column : 7 / span 3;
   grid-row: 7 / span 1;
   width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
 
 }
 
+@media (min-width: 800px) {
+  .home-statistics {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 120px auto 30px auto 30px auto auto 120px ;
+  background-color: #ed6c79;
+  margin: 0;
+  padding: 0;
+}
+
+.statistics-heading {
+  grid-column : 1 / span 10;
+  grid-row: 2 / span 1;
+  text-align: center;
+  margin: 0 0 30px 0;
+  padding: 0;
+
+}
+
+.food-stamps {
+  grid-column : 2 / span 2;
+  grid-row: 4 / span 2;
+  width: 100%;
+
+}
+
+.single-home {
+  grid-column : 5 / span 2;
+  grid-row: 4 / span 2;
+  width: 100%;
+
+}
+
+.health-ins{
+  grid-column : 8 / span 2;
+  grid-row: 4 / span 2;
+  width: 100%;
+
+}
+
+.food-stamp-text {
+  grid-column : 2 / span 2;
+  grid-row: 6 / span 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 22px;
+
+}
+
+.single-home-text {
+  grid-column : 5 / span 2;
+  grid-row: 6 / span 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 22px;
+
+}
+
+.health-ins-text {
+  grid-column : 8 / span 2;
+  grid-row: 6 / span 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 22px;
+
+}
+}
+
+/*Donate section of homepage*/
+.home-donate {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 40px auto 10px auto auto auto auto auto auto auto auto auto ;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.donate-image {
+  grid-column: 4 / span 4;
+  grid-row: 4 / span 6;
+  border-radius: 100%;
+  width: 100%;
+}
+
+
+.donate-tag {
+  grid-column: 3 / span 6;
+  grid-row: 2 / span 1;
+  width: 100%;
+  text-align: center;
+  color: #7db656 ;
+    font-size: 32px;
+  letter-spacing: 2px;
+  font-family: 'IM Fell English', serif;
+}
+
+.donate-text {
+  grid-column: 2 / -2;
+  grid-row: 11 / span 1;
+  width: 100%;
+  font-weight: 100;
+  text-align: center;
+  color:#333;
+  font-size: 18px;
+}
+
+.donate-button {
+  grid-column: 3 / span 6;
+  grid-row: 12 / span 1;
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 50px;
+  background-color: #ff0;
+  border-radius: 4px;
+  font-family: 'IM Fell English', serif;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .home-donate {
+    grid-template-rows: 80px auto auto auto auto auto auto auto auto auto auto 80px ;
+  }
+
+  .donate-image {
+    grid-column: 2 / span 4;
+    grid-row: 3 / span 8;
+  }
+
+  .donate-tag {
+    grid-column: 7 / span 3;
+    grid-row: 4 / span 2;
+    padding-left: 15px;
+    text-align: left;
+  }
+
+  .donate-text {
+    grid-column: 7 / -2;
+    grid-row: 6 / span 3;
+    padding-left: 15px;
+    font-size: 20px;
+    text-align: left
+  }
+
+  .donate-button {
+    grid-column: 7 / span 2;
+    grid-row: 9 / span 1;
+    margin-left: 15px;
+    font-size: 20px;
+
+  }
+}
+
+/*first quote section*/
+
+.quote-section-2 {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 20px 80px auto auto auto 50px  ;
+  background-color: #7db656;
+  margin: 0;
+  padding: 0;
+}
+
+.quote-section-2 .big-quote {
+  grid-column: 1 / -1;
+  grid-row: 2 / span 1;
+  font-family: 'IM Fell English', serif;
+  color: #333;
+  font-size: 100px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.quote-section-2 .bold-white-text {
+  grid-column: 4 / -2;
+  grid-row: 4 / span 1;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: right;
+  margin: 0;
+}
+
+.quote-section-2 .handwriting-text {
+  grid-column: 2 / -2;
+  grid-row: 3 / span 1;
+  font-family: 'La Belle Aurore', Times, serif;
+  color: #333;
+  font-size: 28px;
+  line-height: 28px;
+  text-align: right;
+  margin: 0;
+}
+
+.quote-section-2 .quote-source {
+  grid-column: 2 / -2;
+  grid-row: 5 / span 1;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  color: #333;
+  font-size: 20px;
+  text-align: right;
+  margin: 0;
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 500px) {
+.quote-section-2 .bold-white-text {
+    grid-column: 1 / -2;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .quote-section-2 {
+    grid-template-rows: 30vh 80px auto auto auto 30vh  ;
+    background-color: #7db656;
+    margin: 0;
+    padding: 0;
+  }
+
+  .quote-section-2 .bold-white-text {
+    grid-column: 2 / -3;
+    grid-row: 4 / span 1;
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .quote-section-2 .handwriting-text {
+    grid-column: 4 / -3;
+    grid-row: 3 / span 1;
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .quote-section-2 .quote-source {
+    grid-column: 3 / span 6;
+    grid-row: 5 / span 1;
+
+  }
+}
+
+/*footer */
+
+footer {
+background-color: #333;
+height: 200px;
+}
 

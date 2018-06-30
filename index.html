@@ -14,6 +14,8 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
   <link href="https://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
   <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 <body>
@@ -21,13 +23,13 @@
   <header>
     <nav>
       <div class="nav-bg-mobile"></div>
-      <div class="home">Home</div>
-      <div class="mission">Mission</div>
-      <div class="donate">Donate</div>
+      <div class="home"><a href="">Home</a></div>
+      <div class="mission"><a href="#mission-link">Mission</a></div>
+      <div class="store"><a href="#store-link">Store</a></div>
       <div class="logo-center"><img class="logo" src="img/ezra-min-logo.png"></div>
-      <div class="shelter">Shelter</div>
-      <div class="store">Store</div>
-      <div class="contact">Contact</div>
+      <div class="shelter"><a href="">Shelter</a></div>
+      <div class="donate"><a href="">Donate</a></div>
+      <div class="contact"><a href="">Contact</a></div>
 
 
     </nav>
@@ -38,20 +40,27 @@
 
     <section class="hero-img">
       <picture>
-        <source media="(min-width: 1080px)" srcset="img/hero-img.jpg">
+        <source media="(min-width: 1080px)" srcset="img/x-wide.png">
           <source media="(min-width: 600px)" srcset="img/hero-img.jpg">
-            <img class="header-img"  src="img/hero-img-small.jpg" alt="Ezra Ministries Main Image">
+            <img class="header-img"  src="img/hero-img-small.png" alt="Ezra Ministries Main Image">
           </picture>
+<!--           <div class="scroll-down">
+            <p>scroll</p>
+            <i class="fas fa-long-arrow-alt-down"></i>
+          </div> -->
+
+
         </section>
 
         <section class="home-mission">
-          <h1>Our Mission</h1>
-          <p>
-      Ignore the human until she needs to get up, then climb on her lap and sprawl scratch leg; meow for can opener to feed me. Walk on car leaving trail of paw prints on hood and windshield drink water out of the faucet has closed eyes but still sees you cat is love, cat is life pet me pet me don't pet me, this cat happen now, it was too purr-fect!!!. Sit on human lick master's hand at first then bite because im moody climb a tree, wait for a fireman jump to fireman then scratch his face. Experiences short bursts of poo-phoria after going to the loo eat from dog's food.</p>
-      <button class="mission-button">Support Our Mission</button>
+          <div id="mission-link"></div>
+          <h1>OUR MISSION</h1>
+          <p>Ezra Ministries' vision is  to provide food, clothing, shelter,  and emergency funds for the homeless, helpless, and hopeless of Carteret County in partnership with other outreach organizations.</p>
+          <button class="mission-button">Support Our Mission</button>
         </section>
 
         <section class="home-store">
+          <div id="store-link"></div>
           <img class="store-image" src="img/lighthouse-sq.jpg">
           <img class="store-logo" src="img/store-logo.png">
           <h2 class="store-tag">STORE</h2>
@@ -84,6 +93,23 @@
           <p class="stat-text health-ins-text">X% of residents do not have health insurance coverage.</p>
 
         </section>
+
+        <section class="home-donate">
+          <img class="donate-image" src="img/donate.png">
+          <h2 class="donate-tag">GIVE</h2>
+          <p class="donate-text">With your partnership, the people in need of Carteret County will have the opportunity to see their future changed.</p>
+          <button class="donate-button">Donate</button>
+        </section>
+
+        <section class="quote-section-2">
+          <p class="big-quote">"</p>
+          <p class="handwriting-text">It may seem like a small ministry to you,</p>
+          <p class="bold-white-text">but to me it is everything.</p>
+          <p class="quote-source">{ Shelter Resident }</p>
+        </section>
+
+        <footer>
+        </footer>
 
 
       </div>
