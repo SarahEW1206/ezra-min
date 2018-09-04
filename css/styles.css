@@ -59,22 +59,39 @@ a {
 
 header {
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
   z-index: 1000;
   width: 100%;
   margin: 0 auto;
+  padding: 20px 0 0 0;
   background-color: rgba(255, 255, 255, 0.0);
   transition: all 0.2s ease;
   border-bottom: 1px solid #bababa;
 }
 
+.white {
+  background-color: rgba(255, 255, 255, 1.0);
+  background-image: none;
+  padding: 20px 0 0 0;
+  width: 100%;
+  margin-top: 0px;
+  transition: all 0.2s ease;
+
+}
+
 @media screen and (min-width: 800px) {
   header {
     margin-top: 30px;
+    padding: 20px 0 15px 0;
 /*    background-image: url(https://raw.githubusercontent.com/SarahEW1206/ezra-min/master/img/nav-bg.png);
 */    background-position: 50% 50%;
 }
+
+.white {
+  padding: 30px 0 15px 0;
+  margin-top: 0px;
+
+}
+
 }
 
 nav {
@@ -94,6 +111,7 @@ nav {
 nav a {
   color: #333;
   font-size: 13px;
+  text-shadow: 1px 1px 4px #fff;
 }
 
 #logo-link {
@@ -120,15 +138,7 @@ nav a {
 
 }
 
-.white {
-  background-color: rgba(255, 255, 255, 1.0);
-  background-image: none;
-  padding: 10px 0;
-  width: 100%;
-  margin-top: 0;
-  transition: all 0.2s ease;
 
-}
 
 /*.nav-bg-mobile {
   grid-column: 2 / -2;
@@ -148,7 +158,7 @@ nav a {
     padding: 20px 0 10px 0;
   }
 
-  nav .home {
+/*  nav .home {
     grid-column: 3 / span 2;
     grid-row: 2 / span 1;
     display: flex;
@@ -164,60 +174,63 @@ nav a {
     justify-content: center;
     align-items: center;
     padding: 10px 0 4px 0;
-  }
+    }*/
 
-  nav .donate {
-    grid-column: 7 / span 2;
-    grid-row: 2 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0 4px 0;
-  }
 
-  nav .shelter {
-    grid-column: 3 / span 2;
-    grid-row: 3 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4px 0 10px 0;
-  }
 
-  nav .store {
-    grid-column: 5 / span 2;
-    grid-row: 3 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4px 0 10px 0;
-  }
-
-  nav .contact {
-    grid-column: 7 / span 2;
-    grid-row: 3 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4px 0 10px 0;
-  }
-
-  @media screen and (min-width: 800px) {
-
-    nav {
-      display: grid;
-      grid-template-columns: repeat(9, 1fr);
-      grid-template-rows: auto;
-      width: 100%;
-      margin: 0 auto;
-      top: -10px;
-      padding-bottom: 0px;
-      background-color: rgba(255, 255, 255, 0.0);
+    nav .store {
+      grid-column: 2 / span 2;
+      grid-row: 2 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 0 10px 0;
     }
 
-    .nav-bg-mobile {
-      display: none;
+    nav .shelter {
+      grid-column: 4 / span 2;
+      grid-row: 2 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 0 10px 0;
     }
+
+    nav .donate {
+      grid-column: 6 / span 2;
+      grid-row: 2 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 0 10px 0;
+    }
+
+
+    nav .contact {
+      grid-column: 8 / span 2;
+      grid-row: 2 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 0 10px 0;
+    }
+
+    @media screen and (min-width: 800px) {
+
+      nav {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: auto;
+        width: 100%;
+        margin: 0 auto;
+        top: -10px;
+        padding-bottom: 0px;
+        background-color: rgba(255, 255, 255, 0.0);
+      }
+
+      .nav-bg-mobile {
+        display: none;
+      }
 
 /*  nav .home {
     grid-column: 1 / span 1;
@@ -273,12 +286,6 @@ nav a {
       padding: 0px;
     }
 
-    /**/
-
-    nav a{
-      text-shadow: 1px 1px 4px #fff;
-    }
-
   }
 
   @media screen and (min-width: 850px) {
@@ -288,26 +295,26 @@ nav a {
   }
 
   .logo {
-    width: 50%;
+    width: 80%;
     max-width: 250px;
-    padding-top: 20px;
-    transition: all 1s ease;
-  }
+/*    padding-top: 20px;
+*/    transition: all 1s ease;
+}
 
-  @media screen and (min-width: 800px) {
-    .logo {
-      width: 60%;
-    }
+@media screen and (min-width: 800px) {
+  .logo {
+    width: 80%;
   }
+}
 
-  .divot {
-    position: relative;
-    bottom: 0px;
-    width: 100%;
-  }
+.divot {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+}
 
-  .container {
-    width: 100%;
+.container {
+  width: 100%;
 /*  max-width: 1080px;
 */  display: block;
 margin: 0 auto;
@@ -1046,23 +1053,23 @@ iframe {
 
 @media screen and (min-width: 768px) {
   .store-page section {
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-}
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 
-.store-page-image {
-  width: 40%;
-}
+  .store-page-image {
+    width: 40%;
+  }
 
-.store-page-right {
-  width: 55%;
-}
+  .store-page-right {
+    width: 55%;
+  }
 
-.store-page-heading {
-  margin-top: 0;
+  .store-page-heading {
+    margin-top: 0;
 
-}
+  }
 
 }
 
