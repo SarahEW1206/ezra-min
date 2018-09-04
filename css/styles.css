@@ -19,6 +19,10 @@ padding: 0;
 transition: all 0.2s ease;
 }
 
+body {
+  padding-bottom: 200px;
+}
+
 a {
   text-decoration: none;
   color: #333;
@@ -315,11 +319,9 @@ nav a {
 
 .container {
   width: 100%;
-/*  max-width: 1080px;
-*/  display: block;
-margin: 0 auto;
-/*  box-shadow: 0 0 4px black;
-*/  background-color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  background-color: #ffffff;
 }
 
 .hero-img {
@@ -989,6 +991,13 @@ margin: 0 auto;
 footer {
   background-color: #333;
   height: 200px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: -100;
+  color: #fff;
+  padding: 30px;
 }
 
 /*subpage general*/
@@ -1004,12 +1013,11 @@ header.subpage-header{
 }
 
 .subpage .container {
-  background-color: rgba(0,0,0,0.0);
   padding: 60px 0;
   margin: 0 auto;
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
 }
+
 .subpage-heading {
   color: #fff;
   margin-top: 40px;
@@ -1048,7 +1056,14 @@ header.subpage-header{
   background-color: rgba(95, 165, 202, 1.0);
 }
 
+.store-page .container {
+  background-color: rgba(95, 165, 202, 1.0);
+  width: 100%;
+}
+
 .store-page main {
+  width: 90%;
+  margin: 0 auto;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
