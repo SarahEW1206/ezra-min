@@ -991,21 +991,9 @@ footer {
   height: 200px;
 }
 
-/*store*/
+/*subpage general*/
 
-.store-page {
-  background-color: rgba(95, 165, 202, 1.0);
-}
-
-.store-page .container {
-  background-color: rgba(95, 165, 202, 1.0);
-  padding: 60px 0;
-  margin: 0 auto;
-  width: 90%;
-  max-width: 1200px;
-}
-
-.store-page header {
+header.subpage-header{
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -1013,6 +1001,51 @@ footer {
   background-color: rgba(255, 255, 255, 1.0);
   transition: all 0.2s ease;
   border-bottom: 1px solid #bababa;
+}
+
+.subpage .container {
+  background-color: rgba(0,0,0,0.0);
+  padding: 60px 0;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+}
+.subpage-heading {
+  color: #fff;
+  margin-top: 40px;
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-family: 'IM Fell English', serif;
+}
+
+.subpage-text, ul, li {
+  font-weight: 300;
+  text-align: left;
+  color: rgba(0,0,0,0.7);
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.subpage p a{
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+
+  header.subpage-header {
+    padding: 30px 0 15px 0;
+  }
+
+  .subpage-heading {
+    margin-top: 0;
+  }
+
+}
+
+/*store*/
+
+.store-page {
+  background-color: rgba(95, 165, 202, 1.0);
 }
 
 .store-page main {
@@ -1044,32 +1077,12 @@ footer {
   color: #fff;
 }
 
-
-.store-page-heading {
-  color: #fff;
-  margin-top: 40px;
-  font-size: 32px;
-  letter-spacing: 2px;
-  font-family: 'IM Fell English', serif;
-}
-
-.store-page-text, ul, li {
-  font-weight: 100;
-  text-align: left;
-  color:#333;
-  font-size: 18px;
-}
-
 iframe {
   display: block;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
-
-  .store-page header {
-    padding: 30px 0 15px 0;
-  }
 
   .store-page main {
     flex-direction: row;
@@ -1090,15 +1103,53 @@ iframe {
   }
 
   .store-page-main-content {
-    /*width: 65%;*/
     margin-right: 30px;
   }
 
-  .store-page-heading {
-    margin-top: 0;
+}
 
+/* shelter */
+
+
+.shelter-page {
+  background-color: #ed6c79;
+}
+
+.shelter-page main {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shelter-page-main-content {
+  width: 100%;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+
+  .shelter-page main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .shelter-page-image {
+    width: 45%;
+    margin: 0;
+  }
+
+  .shelter-page-main-content {
+    width: 50%;
   }
 
 }
+
 
 
