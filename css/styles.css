@@ -26,7 +26,7 @@ a {
   padding: 0;
 }
 
-.new-nav-bar {
+.top-nav-bar {
   position: fixed;
   z-index: 10000;
   background-color: #7db656;
@@ -1009,9 +1009,18 @@ footer {
   position: relative;
   width: 100%;
   margin: 0 auto;
+  padding: 20px 0 0 0;
   background-color: rgba(255, 255, 255, 1.0);
   transition: all 0.2s ease;
   border-bottom: 1px solid #bababa;
+}
+
+.store-page main {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .store-page section {
@@ -1020,16 +1029,21 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .store-page-image {
   width: 100%;
+  margin: 5px 0;
 }
 
-.store-page-right {
+.store-page-main-content {
   width: 100%;
 }
+
+.store-page-main-content a{
+  color: #fff;
+}
+
 
 .store-page-heading {
   color: #fff;
@@ -1052,18 +1066,32 @@ iframe {
 }
 
 @media screen and (min-width: 768px) {
-  .store-page section {
+
+  .store-page header {
+    padding: 30px 0 15px 0;
+  }
+
+  .store-page main {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .store-page section {
+    margin-top: 50px;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
   }
 
   .store-page-image {
-    width: 40%;
+    width: 33%;
+    margin: 0;
   }
 
-  .store-page-right {
-    width: 55%;
+  .store-page-main-content {
+    /*width: 65%;*/
+    margin-right: 30px;
   }
 
   .store-page-heading {
