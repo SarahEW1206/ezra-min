@@ -11,13 +11,12 @@
 html,
 body {
   width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-background-color: #f0f0f0;
-    background-image: url(https://raw.githubusercontent.com/SarahEW1206/ezra-min/master/img/light_noise_diagonal_@2X.png);
-font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-  transition: all 1s ease;
+/*  height: 100%;
+*/  margin: 0;
+padding: 0;
+/*background-color: #f0f0f0;
+*/font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+transition: all 0.2s ease;
 }
 
 a {
@@ -25,6 +24,14 @@ a {
   color: #333;
   margin: 0;
   padding: 0;
+}
+
+.new-nav-bar {
+  position: fixed;
+  z-index: 10000;
+  background-color: #7db656;
+  width: 100%;
+  text-align: right;
 }
 
 .scroll-down {
@@ -55,22 +62,19 @@ header {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 97%;
-  /*max-width: 1090px;
-  margin-top: 0px;*/
+  width: 100%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.0);
-  transition: all 1s ease;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #bababa;
 }
 
 @media screen and (min-width: 800px) {
   header {
     margin-top: 30px;
-    background-image: url(https://raw.githubusercontent.com/SarahEW1206/ezra-min/master/img/nav-bg.png);
-    background-position: 50% 50%;
-  }
+/*    background-image: url(https://raw.githubusercontent.com/SarahEW1206/ezra-min/master/img/nav-bg.png);
+*/    background-position: 50% 50%;
+}
 }
 
 nav {
@@ -87,6 +91,18 @@ nav {
   padding-bottom: 7px;
 }
 
+nav a {
+  color: #333;
+  font-size: 13px;
+}
+
+#logo-link {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
 #mission-link, #store-link {
   position: absolute;
   margin-top: -250px;
@@ -95,12 +111,12 @@ nav {
 @media(min-width: 800px) {
 
   #mission-link {
-  margin-top: -140px;
-}
+    margin-top: -250px;
+  }
 
   #store-link {
-  margin-top: -120px;
-}
+    margin-top: -120px;
+  }
 
 }
 
@@ -109,195 +125,192 @@ nav {
   background-image: none;
   padding: 10px 0;
   width: 100%;
-/*  max-width: 1080px;
-*/  margin-top: 0;
-  transition: all 1s ease;
+  margin-top: 0;
+  transition: all 0.2s ease;
 
 }
 
-.nav-bg-mobile {
+/*.nav-bg-mobile {
   grid-column: 2 / -2;
   grid-row: 2 / span 2;
   background-image: url(https://raw.githubusercontent.com/SarahEW1206/ezra-min/master/img/mobile-nav-bg.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-}
+  }*/
 
 
-nav .logo-center {
-  grid-column: 1 / span 10;
-  grid-row: 1 / span 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0 10px 0;
-}
-
-nav .home {
-  grid-column: 3 / span 2;
-  grid-row: 2 / span 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0 4px 0;
-}
-
-nav .mission {
-  grid-column: 5 / span 2;
-  grid-row: 2 / span 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0 4px 0;
-}
-
-nav .donate {
-  grid-column: 7 / span 2;
-  grid-row: 2 / span 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0 4px 0;
-}
-
-nav .shelter {
-  grid-column: 3 / span 2;
-  grid-row: 3 / span 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 0 10px 0;
-}
-
-nav .store {
-  grid-column: 5 / span 2;
-  grid-row: 3 / span 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 0 10px 0;
-}
-
-nav .contact {
-  grid-column: 7 / span 2;
-  grid-row: 3 / span 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 0 10px 0;
-}
-
-@media screen and (min-width: 800px) {
-
-  nav {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: auto;
-    width: 100%;
-    margin: 0 auto;
-    top: -10px;
-    padding-bottom: 0px;
-    background-color: rgba(255, 255, 255, 0.0);
-  }
-
-  .nav-bg-mobile {
-    display: none;
+  nav .logo-center {
+    grid-column: 1 / span 10;
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 10px 0;
   }
 
   nav .home {
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 4px 0;
+  }
+
+  nav .mission {
+    grid-column: 5 / span 2;
+    grid-row: 2 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 4px 0;
+  }
+
+  nav .donate {
+    grid-column: 7 / span 2;
+    grid-row: 2 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 4px 0;
+  }
+
+  nav .shelter {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0 10px 0;
+  }
+
+  nav .store {
+    grid-column: 5 / span 2;
+    grid-row: 3 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0 10px 0;
+  }
+
+  nav .contact {
+    grid-column: 7 / span 2;
+    grid-row: 3 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0 10px 0;
+  }
+
+  @media screen and (min-width: 800px) {
+
+    nav {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: auto;
+      width: 100%;
+      margin: 0 auto;
+      top: -10px;
+      padding-bottom: 0px;
+      background-color: rgba(255, 255, 255, 0.0);
+    }
+
+    .nav-bg-mobile {
+      display: none;
+    }
+
+/*  nav .home {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0px;
+    }*/
+
+    nav .store {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+    }
+
+    nav .shelter {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+    }
+
+    nav .logo-center {
+      grid-column: 4 / span 3;
+      grid-row: 1 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+    }
+
+    nav .donate {
+      grid-column: 7 / span 1;
+      grid-row: 1 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+    }
+
+    nav .contact {
+      grid-column: 8 / span 1;
+      grid-row: 1 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+    }
+
+    /**/
+
+    nav a{
+      text-shadow: 1px 1px 4px #fff;
+    }
+
   }
 
-  nav .mission {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
+  @media screen and (min-width: 850px) {
+    nav a{
+      font-size: 16px;
+    }
   }
 
-  nav .store {
-    grid-column: 3 / span 1;
-    grid-row: 1 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-  }
-
-  nav .logo-center {
-    grid-column: 4 / span 3;
-    grid-row: 1 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-  }
-
-  nav .shelter {
-    grid-column: 7 / span 1;
-    grid-row: 1 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-  }
-
-  nav .donate {
-    grid-column: 8 / span 1;
-    grid-row: 1 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-  }
-
-  nav .contact {
-    grid-column: 9 / span 1;
-    grid-row: 1 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-  }
-
-}
-
-@media screen and (min-width: 850px) {
-  nav {
-    font-size: 13px;
-  }
-}
-
-.logo {
-  width: 60%;
-  max-width: 250px;
-  transition: all 1s ease;
-}
-
-@media screen and (min-width: 800px) {
   .logo {
-    width: 70%;
+    width: 50%;
+    max-width: 250px;
+    padding-top: 20px;
+    transition: all 1s ease;
   }
-}
 
-.divot {
-  position: relative;
-  bottom: 0px;
-  width: 100%;
-}
+  @media screen and (min-width: 800px) {
+    .logo {
+      width: 60%;
+    }
+  }
 
-.container {
-  width: 100%;
+  .divot {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
 /*  max-width: 1080px;
 */  display: block;
-  margin: 0 auto;
+margin: 0 auto;
 /*  box-shadow: 0 0 4px black;
 */  background-color: #ffffff;
 }
@@ -319,27 +332,27 @@ nav .contact {
 /*mission homepage*/
 
 .home-mission {
-  padding: 30px;
+  padding: 150px 30px;
   background-color: #7db656;
   margin-top: -10px;
 }
 
 .home-mission h1 {
-    font-family: 'IM Fell English', serif;
-    color: #fff;
-    font-size: 32px;
-    letter-spacing: 2px;
-     max-width: 800px;
-    display: block;
-    margin: 20px auto 30px auto;
+  font-family: 'IM Fell English', serif;
+  color: #fff;
+  font-size: 32px;
+  letter-spacing: 2px;
+  max-width: 800px;
+  display: block;
+  margin: 20px auto 30px auto;
 }
 
 .home-mission p {
-    font-size: 22px;
-    line-height: 28px;
-    max-width: 800px;
-    display: block;
-    margin: 0 auto;
+  font-size: 22px;
+  line-height: 28px;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
 }
 
 .mission-button {
@@ -423,37 +436,37 @@ nav .contact {
 
   .store-image {
    grid-column: 2 / span 4;
-    grid-row: 3 / span 8;
-  }
+   grid-row: 3 / span 8;
+ }
 
-  .store-logo {
-    grid-column: 3 / span 2;
-    grid-row: 5 / span 1;
-    width: 100%;
-  }
+ .store-logo {
+  grid-column: 3 / span 2;
+  grid-row: 5 / span 1;
+  width: 100%;
+}
 
-  .store-tag {
-    grid-column: 7 / span 3;
-    grid-row: 4 / span 2;
-    padding-left: 15px;
-    text-align: left;
-  }
+.store-tag {
+  grid-column: 7 / span 3;
+  grid-row: 4 / span 2;
+  padding-left: 15px;
+  text-align: left;
+}
 
-  .store-text {
-    grid-column: 7 / -2;
-    grid-row: 6 / span 3;
-    padding-left: 15px;
-    font-size: 20px;
-    text-align: left
-  }
+.store-text {
+  grid-column: 7 / -2;
+  grid-row: 6 / span 3;
+  padding-left: 15px;
+  font-size: 20px;
+  text-align: left
+}
 
-  .store-button {
-    grid-column: 7 / span 2;
-    grid-row: 9 / span 1;
-    margin-left: 15px;
-    font-size: 20px;
+.store-button {
+  grid-column: 7 / span 2;
+  grid-row: 9 / span 1;
+  margin-left: 15px;
+  font-size: 20px;
 
-  }
+}
 }
 
 /*first quote section*/
@@ -513,7 +526,7 @@ nav .contact {
 }
 
 @media screen and (min-width: 500px) {
-.bold-white-text {
+  .bold-white-text {
     grid-column: 1 / -2;
   }
 }
@@ -577,7 +590,7 @@ nav .contact {
   width: 100%;
   text-align: center;
   color: #7db656 ;
-    font-size: 32px;
+  font-size: 32px;
   letter-spacing: 2px;
   font-family: 'IM Fell English', serif;
 }
@@ -712,77 +725,77 @@ nav .contact {
 
 @media (min-width: 800px) {
   .home-statistics {
-  display: grid;
-  grid-gap: 2px;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 120px auto 30px auto 30px auto auto 120px ;
-  background-color: #ed6c79;
-  margin: 0;
-  padding: 0;
-}
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 120px auto 30px auto 30px auto auto 120px ;
+    background-color: #ed6c79;
+    margin: 0;
+    padding: 0;
+  }
 
-.statistics-heading {
-  grid-column : 1 / span 10;
-  grid-row: 2 / span 1;
-  text-align: center;
-  margin: 0 0 30px 0;
-  padding: 0;
+  .statistics-heading {
+    grid-column : 1 / span 10;
+    grid-row: 2 / span 1;
+    text-align: center;
+    margin: 0 0 30px 0;
+    padding: 0;
 
-}
+  }
 
-.food-stamps {
-  grid-column : 2 / span 2;
-  grid-row: 4 / span 2;
-  width: 100%;
+  .food-stamps {
+    grid-column : 2 / span 2;
+    grid-row: 4 / span 2;
+    width: 100%;
 
-}
+  }
 
-.single-home {
-  grid-column : 5 / span 2;
-  grid-row: 4 / span 2;
-  width: 100%;
+  .single-home {
+    grid-column : 5 / span 2;
+    grid-row: 4 / span 2;
+    width: 100%;
 
-}
+  }
 
-.health-ins{
-  grid-column : 8 / span 2;
-  grid-row: 4 / span 2;
-  width: 100%;
+  .health-ins{
+    grid-column : 8 / span 2;
+    grid-row: 4 / span 2;
+    width: 100%;
 
-}
+  }
 
-.food-stamp-text {
-  grid-column : 2 / span 2;
-  grid-row: 6 / span 2;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-size: 22px;
+  .food-stamp-text {
+    grid-column : 2 / span 2;
+    grid-row: 6 / span 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
 
-}
+  }
 
-.single-home-text {
-  grid-column : 5 / span 2;
-  grid-row: 6 / span 2;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-size: 22px;
+  .single-home-text {
+    grid-column : 5 / span 2;
+    grid-row: 6 / span 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
 
-}
+  }
 
-.health-ins-text {
-  grid-column : 8 / span 2;
-  grid-row: 6 / span 2;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-size: 22px;
+  .health-ins-text {
+    grid-column : 8 / span 2;
+    grid-row: 6 / span 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
 
-}
+  }
 }
 
 /*Donate section of homepage*/
@@ -810,7 +823,7 @@ nav .contact {
   width: 100%;
   text-align: center;
   color: #7db656 ;
-    font-size: 32px;
+  font-size: 32px;
   letter-spacing: 2px;
   font-family: 'IM Fell English', serif;
 }
@@ -929,7 +942,7 @@ nav .contact {
 }
 
 @media screen and (min-width: 500px) {
-.quote-section-2 .bold-white-text {
+  .quote-section-2 .bold-white-text {
     grid-column: 1 / -2;
   }
 }
@@ -967,7 +980,90 @@ nav .contact {
 /*footer */
 
 footer {
-background-color: #333;
-height: 200px;
+  background-color: #333;
+  height: 200px;
 }
+
+/*store*/
+
+.store-page {
+  background-color: rgba(95, 165, 202, 1.0);
+}
+
+.store-page .container {
+  background-color: rgba(95, 165, 202, 1.0);
+  padding: 60px 0;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.store-page header {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 1.0);
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #bababa;
+}
+
+.store-page section {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.store-page-image {
+  width: 100%;
+}
+
+.store-page-right {
+  width: 100%;
+}
+
+.store-page-heading {
+  color: #fff;
+  margin-top: 40px;
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-family: 'IM Fell English', serif;
+}
+
+.store-page-text, ul, li {
+  font-weight: 100;
+  text-align: left;
+  color:#333;
+  font-size: 18px;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .store-page section {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.store-page-image {
+  width: 40%;
+}
+
+.store-page-right {
+  width: 55%;
+}
+
+.store-page-heading {
+  margin-top: 0;
+
+}
+
+}
+
 

@@ -19,16 +19,17 @@
   <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 <body>
+  <div class="new-nav-bar">
+    Facebook  |   Ph:999-999-9999
+  </div>
 
   <header>
     <nav>
       <div class="nav-bg-mobile"></div>
-      <div class="home"><a href="">Home</a></div>
-      <div class="mission"><a href="#mission-link">Mission</a></div>
-      <div class="store"><a href="#store-link">Store</a></div>
-      <div class="logo-center"><img class="logo" src="img/ezra-min-logo.png"></div>
-      <div class="shelter"><a href="">Shelter</a></div>
-      <div class="donate"><a href="">Donate</a></div>
+      <div class="store"><a href="store/index.html">Store</a></div>
+      <div class="shelter"><a href="#shelter-link">Shelter</a></div>
+      <div class="logo-center"><a id="logo-link" href=""><img class="logo" src="img/ezra-min-logo.png"></a></div>
+      <div class="donate"><a href="#donate-link">Donate</a></div>
       <div class="contact"><a href="">Contact</a></div>
 
 
@@ -69,6 +70,7 @@
         </section>
 
         <section class="quote-section-1">
+
           <p class="big-quote">"</p>
           <p class="bold-white-text">Carry each other's burdens,</p>
           <p class="handwriting-text">and in this way you will fulfill the law of Christ.</p>
@@ -76,6 +78,7 @@
         </section>
 
         <section class="home-shelter">
+          <div id="shelter-link"></div>
           <img class="shelter-image" src="img/living-room-2.png">
           <!-- <img class="shelter-tag" src="img/shelter-tag.png"> -->
           <h2 class="shelter-tag">SHELTER</h2>
@@ -95,6 +98,7 @@
         </section>
 
         <section class="home-donate">
+          <div id="donate-link"></div>
           <img class="donate-image" src="img/donate.png">
           <h2 class="donate-tag">GIVE</h2>
           <p class="donate-text">With your partnership, the people in need of Carteret County will have the opportunity to see their future changed.</p>
@@ -113,7 +117,7 @@
 
 
       </div>
-
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
       <script src="js/app.js"></script>
     </body>
     </html>
