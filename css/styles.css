@@ -20,7 +20,7 @@ transition: all 0.2s ease;
 }
 
 body {
-  padding-bottom: 200px;
+  padding-bottom: 0px;
 }
 
 a {
@@ -1001,18 +1001,7 @@ nav a {
   }
 }
 
-/*footer */
 
-footer {
-  background-color: #333;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: -100;
-  color: #fff;
-  padding: 30px;
-}
 
 /*subpage general*/
 
@@ -1330,6 +1319,134 @@ section.stats {
   width: 90%;
   margin: 0 auto;
   max-width: 1200px;
+}
+
+/*footer */
+
+footer {
+  background-color: #333;
+  width: 100%;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  z-index: -100;
+  color: #fff;
+  font-weight: 100;
+}
+
+.footer-thirds {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-third {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 20px auto;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.first {
+  text-align: left;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+
+.first img {
+  width: 33px;
+  margin-right: 20px;
+}
+
+.second {
+  text-align: left;
+  order: -1;
+  padding-top: 30px;
+  line-height: 22px;
+  justify-content: space-around;
+}
+
+.second img {
+  width: 130px;
+}
+
+.last {
+  font-size: 12px;
+  padding: 0px 30px;
+}
+
+.last img {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.second .footer-fb-icon {
+  width: 35px;
+}
+
+hr {
+  margin: 20px 0 0 0;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, .3);
+}
+
+.copy-credit {
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+#sass-biz-link {
+ color: green;
+}
+
+@media screen and (min-width: 600px) {
+
+  body {
+    padding-bottom: 320px;
+  }
+
+  footer {
+    position: fixed;
+    padding: 100px 0 10px;
+  }
+
+  .footer-thirds {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer-third {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    margin: 0;
+    align-items: center;
+    justify-content: center
+
+  }
+
+  .first {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .second {
+    order: 0;
+    padding-top: 0px;
+    text-align: center;
+  }
+
+  .last {
+    padding: 0 20px;
+  }
+
 }
 
 
