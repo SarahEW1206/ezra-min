@@ -31,11 +31,25 @@ a {
 }
 
 .top-nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
   position: fixed;
   z-index: 10000;
   background-color: #7db656;
   width: 100%;
-  text-align: right;
+  padding: 6px;
+}
+
+.topbar-icon {
+  width: 20px;
+}
+
+.topbar-text {
+  margin: 0 15px;
+  color: white;
+  font-weight: 100;
 }
 
 .scroll-down {
@@ -85,13 +99,13 @@ header {
 @media screen and (min-width: 800px) {
   header {
     margin-top: 30px;
-    padding: 20px 0 15px 0;
+    padding: 30px 0 25px 0;
 /*    background-image: url(https://raw.githubusercontent.com/SarahEW1206/ezra-min/master/img/nav-bg.png);
 */    background-position: 50% 50%;
 }
 
 .white {
-  padding: 30px 0 15px 0;
+  padding: 44px 0 15px 0;
   margin-top: 0px;
 
 }
@@ -857,6 +871,7 @@ nav a {
   border-radius: 4px;
   font-family: 'IM Fell English', serif;
   font-size: 20px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -1040,7 +1055,7 @@ header.subpage-header{
 @media screen and (min-width: 768px) {
 
   header.subpage-header {
-    padding: 30px 0 15px 0;
+    padding: 44px 0 15px 0;
   }
 
   .subpage-heading {
@@ -1070,6 +1085,30 @@ header.subpage-header{
   align-items: center;
 }
 
+.store-details {
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.store-details>div:nth-child(1) {
+  width: 60%;
+}
+
+.store-details ul {
+  list-style: none;
+  padding: 0;
+
+}
+
+.store-details li {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+}
+
 .store-page section {
   padding-bottom: 50px;
   display: flex;
@@ -1091,10 +1130,6 @@ header.subpage-header{
   color: #fff;
 }
 
-iframe {
-  display: block;
-  margin: 0 auto;
-}
 
 @media screen and (min-width: 768px) {
 
@@ -1118,6 +1153,22 @@ iframe {
 
   .store-page-main-content {
     margin-right: 30px;
+  }
+
+  .store-details {
+    padding: 20px;
+    flex-direction: column;
+    width: 40%;
+    text-align: center;
+  }
+
+  .store-details li {
+
+    text-align: center;
+  }
+
+  .store-details>div:nth-child(1) {
+    width: 100%;
   }
 
 }
@@ -1169,14 +1220,33 @@ section.stats {
 .stat {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   padding: 0 20px;
   width: 45%;
   height: 150px;
   margin: 5px;
+  border-radius: 6px;
   background-color: #fff;
+}
+
+.number {
+  font-size: 80px;
+  line-height: 100px;
+  font-weight: 700;
+  font-family: 'IM Fell English', serif;
+  color: #ed6c79;
+}
+
+.detail {
+  font-size: 18px;
+  line-height: 16px;
+}
+
+.shelter-page .donate-button {
+  max-width: 200px;
+  margin: 0;
 }
 
 @media screen and (min-width: 667px) {
@@ -1212,11 +1282,54 @@ section.stats {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 10px 0 50px 0;
   }
-
-
 
 }
 
+/* subpage section with image right/text left*/
+
+.text-left-img-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.right-side-img {
+  width: 100%;
+}
+
+@media screen and (min-width: 667px) {
+
+  .text-left-img-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .right-side-img {
+    width: 50%;
+    margin-left: 20px;
+  }
+
+}
+
+/*subpage section text full width*/
+
+.text-full-width {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/*image gallery*/
+.image-gallery {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
 
 
