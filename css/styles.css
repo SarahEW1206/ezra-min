@@ -1294,28 +1294,6 @@ section.stats {
   align-items: center;
 }
 
-/* .store-details {
-  background-color: #fff;
-  padding: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-} */
-
-.donate-page section {
-  padding-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.donate-page-image {
-  width: 100%;
-  margin: 5px 0;
-}
-
 .donate-page-main-content {
   width: 100%;
 }
@@ -1333,22 +1311,79 @@ section.stats {
     align-items: flex-start;
   }
 
-  .donate-page section {
-    margin-top: 50px;
+  .donate-page-main-content {
+    margin-right: 30px;
+  }
+
+}
+
+/* Contact */
+
+.contact-page h2.subpage-heading {
+  color: #7db656;
+}
+
+.contact-page {
+  background-color: #FFFFFF;
+ 
+}
+
+.contact-page .container {
+  background-color: #FFFFFF;
+  height: auto;
+}
+
+.contact-page main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-page-main-content {
+  width: 100%;
+}
+
+.contact-page-image {
+  width: 100%;
+}
+
+.contact-fb-icon {
+  width: 40px;
+}
+
+.contact-page-main-content h3 {
+  margin-bottom: 0;
+}
+
+.contact-page-main-content .subpage-text {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+  .contact-page main {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
   }
 
-  .donate-page-image {
-    width: 33%;
+  .contact-page .container {
+    height: 100vh;
+  }
+
+  .contact-page-image {
+    width: 45%;
     margin: 0;
   }
 
-  .donate-page-main-content {
-    margin-right: 30px;
+  .contact-page-main-content {
+    width: 50%;
   }
-
 }
 
 /* subpage section with image right/text left*/
