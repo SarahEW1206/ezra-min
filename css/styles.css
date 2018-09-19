@@ -32,12 +32,13 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   position: fixed;
   z-index: 10000;
   background-color: #7db656;
   width: 100%;
   padding: 6px;
+  transition: all 0.5s ease;
 }
 
 .topbar-icon {
@@ -102,7 +103,7 @@ header {
 }
 
 .white {
-  padding: 44px 0 15px 0;
+  padding: 15px 0 15px 0;
   margin-top: 0px;
 }
 
@@ -987,13 +988,13 @@ nav a {
 /*subpage general*/
 
 header.subpage-header{
-  position: fixed;
+  /* position: fixed;
   width: 100%;
   margin: 0 auto;
-  padding: 20px 0 0 0;
+  padding: 20px 0 0 0; */
   background-color: rgba(255, 255, 255, 1.0);
-  transition: all 0.2s ease;
-  border-bottom: 1px solid #bababa;
+  /* transition: all 0.2s ease;
+  border-bottom: 1px solid #bababa; */
 }
 
 .subpage .container {
@@ -1024,9 +1025,9 @@ header.subpage-header{
 
 @media screen and (min-width: 768px) {
 
-  header.subpage-header {
+  /* header.subpage-header {
     padding: 44px 0 15px 0;
-  }
+  } */
 
   .subpage-heading {
     margin-top: 0;
