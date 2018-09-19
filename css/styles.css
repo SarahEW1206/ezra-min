@@ -37,7 +37,7 @@ a {
   z-index: 10000;
   background-color: #7db656;
   width: 100%;
-  padding: 6px;
+  padding: 4px;
   transition: all 0.5s ease;
 }
 
@@ -88,7 +88,7 @@ header {
 .white {
   background-color: rgba(255, 255, 255, 1.0);
   background-image: none;
-  padding: 20px 0 0 0;
+  padding: 0 0 0 0;
   width: 100%;
   margin-top: 0px;
   transition: all 0.2s ease;
@@ -188,7 +188,7 @@ nav a {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 4px 0 10px 0;
+      padding: 4px 0 4px 0;
     }
 
     nav .shelter {
@@ -197,7 +197,7 @@ nav a {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 4px 0 10px 0;
+      padding: 4px 0 4px 0;
     }
 
     nav .donate {
@@ -206,7 +206,7 @@ nav a {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 4px 0 10px 0;
+      padding: 4px 0 4px 0;
     }
 
 
@@ -216,7 +216,7 @@ nav a {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 4px 0 10px 0;
+      padding: 4px 0 4px 0;
     }
 
     @media screen and (min-width: 800px) {
