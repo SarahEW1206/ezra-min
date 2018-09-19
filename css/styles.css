@@ -336,6 +336,8 @@ nav a {
   display: block;
   margin: 0 auto;
   background-color: #ffffff;
+  position: relative;
+  z-index: 100;
 }
 
 .hero-img {
@@ -1340,7 +1342,7 @@ footer {
   position: relative;
   left: 0;
   bottom: 0;
-  z-index: -100;
+  z-index: 1;
   color: #fff;
   font-weight: 100;
 }
